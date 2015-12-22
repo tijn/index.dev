@@ -1,0 +1,11 @@
+head
+  title Prax
+  link rel='stylesheet' href='/the_index.css'
+  == erb :"favicons.html"
+
+body
+  .apps
+    - @apps.each do |app|
+      a.app href=app.url
+        img.app__icon src="#{app.icon}" onerror="this.src = 'app.png'"
+        .app__name = app

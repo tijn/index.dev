@@ -1,0 +1,42 @@
+*
+  box-sizing: border-box
+
+body
+  background-color: #fafafa
+  font-family: sans-serif
+  margin: 0 auto
+  max-width: 920px
+  color: #333
+  padding: 70px 0px
+
+.apps
+  display: flex
+  flex-wrap: wrap
+  font-size: 13px
+
+.app
+  width: 144px
+  min-height: 100px
+  vertical-align: bottom
+  text-align: center
+  border-radius: 10px
+  padding: 16px
+  margin: 16px
+  text-decoration: none
+  color: #212121
+  background: transparent
+  transition: box-shadow 40ms, background 200ms
+
+  &:focus
+    background: #eee
+
+  &:active
+    box-shadow: 0 2px 2px 0 rgba(0,0,0, 0.2)
+
+.app__icon
+  height: 48px
+  margin-bottom: 20px
+
+.app__name
+  overflow: hidden
+  text-overflow: ellipsis
