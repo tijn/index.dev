@@ -1,0 +1,22 @@
+Metrics/LineLength:
+  Max: 110
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  Enabled: false
+
+Style/SymbolProc:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  # TODO: read https://github.com/bbatsov/rubocop/issues/1633 and decide if we should turn it on again
+  Enabled: false
