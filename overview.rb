@@ -18,7 +18,7 @@ ICON_PATHS = POW_AND_PRAX.product(['_icons', '.icons']).map { |paths| paths.join
 
 get '/' do
   @apps = fetch_apps
-  slim :'index.html'
+  slim :index
 end
 
 get '/icons/:name.png' do |name|
