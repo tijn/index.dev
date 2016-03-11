@@ -1,3 +1,5 @@
+# an Application that Pow/Prax can start
+# name should be the basename of a file or a symlink in ~/{.prax,.pow}/
 class App
   attr_reader :name
 
@@ -6,7 +8,7 @@ class App
   end
 
   def url
-    "//#{name}.dev"
+    "//#{name}.dev" # leaving out the scheme
   end
 
   def icon

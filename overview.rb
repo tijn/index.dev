@@ -34,7 +34,7 @@ end
 
 def fetch_apps
   Dir.glob(GLOB)
-    .select { |name| File.symlink?(name) }
+    .select { |name| File.symlink?(name) || File.file?(name) }
     .map { |name| App.new(name.split('/').last) }
     .sort
 end
