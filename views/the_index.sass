@@ -1,3 +1,6 @@
+$app-width: 144px
+$app-margin: 16px
+
 *
   box-sizing: border-box
 
@@ -5,7 +8,6 @@ body
   background-color: #fafafa
   font-family: sans-serif
   margin: 0 auto
-  max-width: 920px
   color: #333
   padding: 70px 0px
 
@@ -13,22 +15,34 @@ body
   display: flex
   flex-wrap: wrap
   font-size: 13px
+  margin: 0 auto
+  max-width: 5 * $app-width + 10 * $app-margin
+  @media (max-width: 5 * $app-width + 12 * $app-margin)
+    max-width: 4 * $app-width + 8 * $app-margin
+  @media (max-width: 4 * $app-width + 10 * $app-margin)
+    max-width: 3 * $app-width + 6 * $app-margin
+  @media (max-width: 3 * $app-width + 8 * $app-margin)
+    max-width: 2 * $app-width + 4 * $app-margin
 
 .app
-  width: 144px
+  width: $app-width
   min-height: 100px
   vertical-align: bottom
   text-align: center
   border-radius: 10px
-  padding: 16px
-  margin: 16px
+  padding: $app-margin
+  margin: $app-margin
   text-decoration: none
   color: #212121
   background: transparent
   transition: box-shadow 40ms, background 200ms
 
+  &:hover
+    background: #eee
+
   &:focus
     background: #eee
+    outline: none
 
   &:active
     box-shadow: 0 2px 2px 0 rgba(0,0,0, 0.2)
