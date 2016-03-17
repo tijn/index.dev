@@ -16,7 +16,7 @@ class App
   end
 
   def to_s
-    name
+    name.tr('_', ' ')
   end
 
   def <=>(other)
