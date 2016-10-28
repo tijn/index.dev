@@ -2,7 +2,7 @@
 
 A small app to show what's in your ~/.pow or ~/.prax
 
-It will actually show what's in ~/.pow **and** in ~/.prax, but that's okay for you I guess.
+It will actually show what's in ~/.pow *and* in ~/.prax, but that's okay too I guess.
 
 # How to use
 
