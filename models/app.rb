@@ -11,10 +11,6 @@ class App
     "//#{name}.dev" # leaving out the scheme
   end
 
-  def icon
-    "#{name}.png"
-  end
-
   def to_s
     name.tr('_', ' ')
   end

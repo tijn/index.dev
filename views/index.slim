@@ -1,11 +1,12 @@
-head
-  title The Index
-  link rel='stylesheet' href='/the_index.css'
-  == erb :"favicons.html"
+html
+  head
+    title The Index
+    link rel='stylesheet' href='/the_index.css'
+    == erb :"favicons.html"
 
-body
-  .apps
-    - @apps.each do |app|
-      a.app href=app.url
-        img.app__icon src="icons/#{app.icon}" onerror="this.src = 'app.png'"
-        .app__name = app
+  body
+    .apps
+      - @apps.each do |app|
+        a.app href=app.url
+          img.app__icon src="icons/#{app.name}" onerror="this.src = 'bulb.svg'"
+          .app__name = app
