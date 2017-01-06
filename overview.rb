@@ -34,10 +34,16 @@ get '/the_index.css' do
   sass :the_index
 end
 
+HIDDEN_DIR = ['.', '_']
+def hidden_entry?(name)
+  HIDDEN_DIR.include? name[0]
+end
+
 def fetch_apps
   Dir.glob(GLOB)
-     .reject { |name| name =~ /^\.|\_/ }
-     .map { |name| App.new(name.split('/').last) }
+     .map { |name| name.split('/').last }
+     .reject { |name| hidden_entry?(name) }
+     .map { |name| App.new(name) }
      .sort
 end
 
