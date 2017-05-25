@@ -45,15 +45,24 @@ body
   &:active
     box-shadow: 0 2px 2px 0 rgba(0,0,0, 0.2)
 
-.app__icon
-  height: 48px
-  margin-bottom: 20px
-  border-radius: 2px
-  // transition: opacity 50ms, transform 500ms
+  .app__icon
+    height: 48px
+    margin-bottom: 20px
+    border-radius: 2px
+    // transition: opacity 50ms, transform 500ms
 
-.app__name
-  overflow: hidden
-  text-overflow: ellipsis
-  &:after
-    content: '.dev'
+  .app__name
+    overflow: hidden
+    text-overflow: ellipsis
+
+.name
+  .name__version
+    color: #555
+    &:before
+      content: '('
+    &:after
+      content: ')'
+
+  .name__part:last-child
     color: #aaa
+
