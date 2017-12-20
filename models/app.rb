@@ -8,11 +8,12 @@ class App
   end
 
   def url
-    "//#{name}.dev" # leaving out the scheme
+    "//#{name}.#{TLD}" # leaving out the scheme
   end
 
   def to_s
-    name.tr('_', ' ')
+    name.force_encoding('utf-8')
+    name.tr('_', ' ').gsub('.', "\u200b.")
   end
 
   def <=>(other)
