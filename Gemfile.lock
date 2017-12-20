@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
     erubis (2.7.0)
     rack (1.6.4)
     rack-protection (1.5.3)
@@ -23,9 +26,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
   erubis
   rake
   sass
   shotgun
   sinatra
   slim
+
+BUNDLED WITH
+   1.13.2
