@@ -8,15 +8,9 @@ require 'slim'
 require 'tilt/erubis'
 require 'tilt/sass'
 
+require_relative 'config/setup'
 require_relative 'models/app'
 require_relative 'models/domain_name'
-
-POW_ROOT = ENV.fetch('POW_HOST_ROOT', "#{ENV['HOME']}/.pow")
-PRAX_ROOT = ENV.fetch('PRAX_HOSTS', "#{ENV['HOME']}/.prax")
-POW_AND_PRAX = [POW_ROOT, PRAX_ROOT].freeze
-GLOB = "{#{POW_AND_PRAX.join(',')}}/*".freeze
-ICON_PATHS = POW_AND_PRAX.product(['_icons', '.icons']).map { |paths| paths.join('/') }
-ICON_TYPES = %w(svg png).freeze
 
 get '/' do
   @apps = fetch_apps
@@ -39,10 +33,15 @@ def hidden_entry?(name)
   HIDDEN_DIR.include? name[0]
 end
 
+def hide_self?(name)
+  return false unless HIDE_SELF
+  request.host == "#{name}.#{TLD}"
+end
+
 def fetch_apps
   Dir.glob(GLOB)
      .map { |name| name.split('/').last }
-     .reject { |name| hidden_entry?(name) }
+     .reject { |name| hidden_entry?(name) || hide_self?(name) }
      .map { |name| App.new(name) }
      .sort
 end

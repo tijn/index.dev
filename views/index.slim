@@ -9,4 +9,7 @@ html
       - @apps.each do |app|
         a.app href=app.url
           img.app__icon src="icons/#{app.name}" onerror="this.src = 'bulb.svg'"
-          .app__name = app
+          .app__name
+            = app
+            wbr
+            .app_name__tld = ".#{TLD}"
