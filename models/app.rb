@@ -23,4 +23,8 @@ class App
   def domain_for_sorting
     @domain_for_sorting ||= to_s.split('.').reverse
   end
+
+  def to_json(*a)
+    { name: name, url: url }.to_json(*a)
+  end
 end

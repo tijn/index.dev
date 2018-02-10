@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'bundler/setup'
+require 'json'
 require 'sass'
 require 'sinatra'
 require 'slim'
@@ -15,6 +16,11 @@ require_relative 'models/domain_name'
 get '/' do
   @apps = fetch_apps
   slim :index
+end
+
+get '/index.json' do
+  @apps = fetch_apps
+  @apps.to_json
 end
 
 get '/icons/:name' do |name|
