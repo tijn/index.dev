@@ -13,6 +13,8 @@ require_relative 'config/setup'
 require_relative 'models/app'
 require_relative 'models/domain_name'
 
+DEFAULT_ICON_PATH = "#{__dir__}/public/bulb.svg"
+
 get '/' do
   @apps = fetch_apps
   slim :index
@@ -24,8 +26,8 @@ get '/index.json' do
 end
 
 get '/icons/:name' do |name|
-  full_path = detect_icon(name)
-  raise Sinatra::NotFound if full_path.nil?
+  full_path = detect_icon(name) || DEFAULT_ICON_PATH
+  # raise Sinatra::NotFound if full_path.nil?
   last_modified File.mtime(full_path)
   send_file full_path
 end
