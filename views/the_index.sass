@@ -63,16 +63,16 @@ body
 
 .filter
   position: fixed
-  top: 16px
+  top: 0
+  padding: 16px 0
   width: 100%
+  transition: background 200ms, box-shadow 200ms
   .filter__input
-    text-align: center
-
-  #filter
+    // text-align: center
     display: block
     margin: 0 auto
     border: none
-    font-size: 32px
+    font-size: 20px
     color: rgba(0,0,0, 0.87)
     background: transparent
     outline: none !important
@@ -83,3 +83,7 @@ body
       width: 3 * $app-width + 6 * $app-margin
     @media (max-width: 3 * $app-width + 8 * $app-margin)
       width: 2 * $app-width + 4 * $app-margin
+
+.filter--active
+  background: white
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px

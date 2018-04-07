@@ -5,8 +5,8 @@ html
     == erb :"favicons.html"
 
   body
-    .filter
-      input#filter.filter__input autocomplete="off"
+    .filter#filter
+      input#filter-input.filter__input autocomplete="off"
     .apps
       - @apps.each do |app|
         a.app href=app.url data={name:app.name}
