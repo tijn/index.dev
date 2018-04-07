@@ -5,11 +5,15 @@ html
     == erb :"favicons.html"
 
   body
+    .filter
+      input#filter.filter__input autocomplete="off"
     .apps
       - @apps.each do |app|
-        a.app href=app.url
+        a.app href=app.url data={name:app.name}
           img.app__icon src="icons/#{app.name}" onerror="this.src = 'bulb.svg'"
           .app__name
             = app
             wbr
             .app_name__tld = ".#{TLD}"
+  script src="/fuzzysearch.js"
+  script src="/keyhandler.js"

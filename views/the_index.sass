@@ -57,3 +57,29 @@ body
   .app_name__tld
     display: inline
     color: #aaa
+
+.app[data-hidden="true"]
+  display: none
+
+.filter
+  position: fixed
+  top: 16px
+  width: 100%
+  .filter__input
+    text-align: center
+
+  #filter
+    display: block
+    margin: 0 auto
+    border: none
+    font-size: 32px
+    color: rgba(0,0,0, 0.87)
+    background: transparent
+    outline: none !important
+    width: 5 * $app-width + 10 * $app-margin
+    @media (max-width: 5 * $app-width + 12 * $app-margin)
+      width: 4 * $app-width + 8 * $app-margin
+    @media (max-width: 4 * $app-width + 10 * $app-margin)
+      width: 3 * $app-width + 6 * $app-margin
+    @media (max-width: 3 * $app-width + 8 * $app-margin)
+      width: 2 * $app-width + 4 * $app-margin
