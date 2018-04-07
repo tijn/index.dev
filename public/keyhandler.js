@@ -24,7 +24,6 @@ function updateFilter() {
 let navKeys = ['Tab', 'Shift', 'Enter', 'ArrowUp', 'ArrowDown']
 
 document.addEventListener('keydown', (event) => {
-  console.log(event.key)
   if (navKeys.includes(event.key)) {
     return
   } else if (event.key === 'Escape') {
