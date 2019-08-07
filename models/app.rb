@@ -4,6 +4,7 @@ class App
   attr_reader :name
 
   def initialize(name)
+    name = name.split('.').reverse.join('.') if REVERSE_DNS
     @name = name
   end
 

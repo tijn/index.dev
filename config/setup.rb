@@ -18,3 +18,5 @@ ICON_TYPES = %w(svg png).freeze
 
 TLD = ENV.fetch('TLD', 'test')
 HIDE_SELF = ENV.fetch('HIDE_SELF', false) == 'true'
+
+REVERSE_DNS = ENV.fetch('REVERSE_DNS', false)
