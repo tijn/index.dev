@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    dotenv (2.7.5)
+    dotenv (2.7.6)
     erubis (2.7.0)
     ffi (1.11.1)
     mustermann (1.1.0)
