@@ -9,7 +9,7 @@ GEM
     rack (2.2.6.4)
     rack-protection (3.0.6)
       rack
-    rake (13.0.6)
+    rake (13.1.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
