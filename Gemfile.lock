@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     base64 (0.2.0)
-    dotenv (3.1.1)
+    dotenv (3.1.2)
     erubis (2.7.0)
     ffi (1.11.1)
     mustermann (3.0.0)
