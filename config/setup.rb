@@ -16,7 +16,7 @@ GLOB = "{#{APPS_DIR.join(',')}}/*".freeze
 ICON_PATHS = ["#{DATA_DIR}/icons"] + APPS_DIR.product(['_icons', '.icons']).map { |paths| paths.join('/') }
 ICON_TYPES = %w(svg png).freeze
 
-TLD = ENV.fetch('TLD', 'test')
+TLD = ENV.fetch('TLD', 'localhost')
 HIDE_SELF = ENV.fetch('HIDE_SELF', false) == 'true'
 
 REVERSE_DNS = ENV.fetch('REVERSE_DNS', false)
