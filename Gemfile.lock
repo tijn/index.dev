@@ -19,7 +19,7 @@ GEM
     mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.7.4)
-    puma (7.0.4)
+    puma (7.1.0)
       nio4r (~> 2.0)
     rack (3.2.3)
     rack-protection (4.2.1)
@@ -73,7 +73,7 @@ PLATFORMS
 DEPENDENCIES
   dotenv
   erubis
-  puma (~> 7.0)
+  puma (~> 7.1)
   rack
   rackup (~> 2.2)
   rake
