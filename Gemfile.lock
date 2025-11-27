@@ -55,7 +55,7 @@ GEM
       tilt (>= 2.1.0)
     temple (0.10.4)
     tilt (2.6.1)
-    webrick (1.9.1)
+    webrick (1.9.2)
 
 PLATFORMS
   aarch64-linux-gnu
