@@ -11,4 +11,4 @@ gem "slim"
 gem 'webrick'
 
 gem "rackup", "~> 2.3"
-gem "puma", "~> 8.0"
+gem "puma", "~> 8.1"
